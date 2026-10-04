@@ -1,69 +1,289 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import Link from "next/link";
+import { useState } from "react";
+import { products } from "../lib/products";
+
+const reels = [
+  {
+    title: "Arduino Pro Micro — Unlock PIN",
+    url: "https://www.instagram.com/reel/DarxMSguR0o/",
+  },
+  {
+    title: "ESP32 — Unlimited Wi-Fi",
+    url: "https://www.instagram.com/reel/DcgTkAouMFa/",
+  },
+  {
+    title: "ESP32 — Unlock PIN",
+    url: "https://www.instagram.com/reel/Db0RPqBuKTK/",
+  },
+  {
+    title: "ESP32 — Wi-Fi Scanning",
+    url: "https://www.instagram.com/reel/DcyOiCwOfqQ/",
+  },
+  {
+    title: "ESP32 — Evil Twin",
+    url: "https://www.instagram.com/reel/DcqoaeNouQa/",
+  },
+];
+
+export default function HomePage() {
+  const [category, setCategory] = useState("All");
+
+  const categories = ["All", "Arduino", "ESP32", "Security Lab"];
+
+  const filteredProducts =
+    category === "All"
+      ? products
+      : products.filter((product) => product.category === category);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <main>
+      <div className="disclaimer-bar">
+        <div className="disclaimer-track">
+          ⚠ EDUCATIONAL & AUTHORIZED PROJECT USE ONLY • DO NOT USE PROJECTS
+          AGAINST SYSTEMS, NETWORKS OR DEVICES WITHOUT PERMISSION • ALL
+          PROJECTS ARE PROVIDED FOR LEARNING, RESEARCH & CONTROLLED LAB USE
+          ONLY •
+        </div>
+      </div>
+
+      <nav className="site-nav">
+        <Link href="/" className="logo">
+          BUILD<span>WITH</span>HARSHIT
+        </Link>
+
+        <div className="nav-links">
+          <a href="#projects">Projects</a>
+          <a href="#reels">Reels</a>
+          <a href="#about">About</a>
+        </div>
+
+        <div className="nav-auth">
+          <Link href="/login" className="nav-button">
+            Login
+          </Link>
+
+          <Link href="/signup" className="nav-button primary">
+            Sign Up
+          </Link>
+        </div>
+      </nav>
+
+      <section className="hero">
+        <div className="hero-content">
+          <div className="eyebrow">Project Source Code • Tutorials • Labs</div>
+
+          <h1>
+            BUILD
+            <br />
+            <span>WITHOUT</span>
+            <br />
+            LIMITS.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="hero-description">
+            Explore practical Arduino, ESP32 and cybersecurity laboratory
+            projects with source code and tutorials. Watch the project. Get
+            the code. Build it yourself.
+          </p>
+
+          <div className="hero-actions">
+            <a href="#projects" className="primary-button">
+              Explore Projects
+            </a>
+
+            <a href="#reels" className="secondary-button">
+              Watch Reels ↗
+            </a>
+          </div>
+        </div>
+
+        <div className="cube-area">
+          <div className="cube-glow" />
+
+          <div className="cube-wrapper">
+            <div className="cube">
+              <div className="face front" />
+              <div className="face back" />
+              <div className="face right" />
+              <div className="face left" />
+              <div className="face top" />
+              <div className="face bottom" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="stats">
+        <div className="stat">
+          <div className="stat-number">{products.length}</div>
+          <div className="stat-label">Projects Available</div>
+        </div>
+
+        <div className="stat">
+          <div className="stat-number">₹49+</div>
+          <div className="stat-label">Starting Price</div>
+        </div>
+
+        <div className="stat">
+          <div className="stat-number">100%</div>
+          <div className="stat-label">Digital</div>
+        </div>
+      </section>
+
+      <section className="section" id="projects">
+        <div className="section-heading">
+          <div>
+            <div className="section-kicker">Project Library</div>
+
+            <h2>
+              SOURCE.
+              <br />
+              BUILD. LEARN.
+            </h2>
+          </div>
+
+          <p className="section-description">
+            Watch the project first. Then get the source code and build it
+            yourself.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="filters">
+          {categories.map((item) => (
+            <button
+              key={item}
+              className={`filter ${category === item ? "active" : ""}`}
+              onClick={() => setCategory(item)}
+            >
+              {item}
+            </button>
+          ))}
         </div>
-      </main>
-    </div>
+
+        <div className="project-grid">
+          {filteredProducts.map((product) => (
+            <article className="project-card" key={product.id}>
+              <div className="project-visual">
+                <div className="project-chip">{product.category}</div>
+
+                <div className="project-icon">
+                  <span>
+                    {product.category === "Arduino"
+                      ? "ARD"
+                      : product.category === "ESP32"
+                        ? "ESP"
+                        : "SEC"}
+                  </span>
+                </div>
+              </div>
+
+              <div className="project-info">
+                <h3>{product.title}</h3>
+
+                <p>{product.description}</p>
+
+                <div className="project-bottom">
+                  <div className="price">₹{product.priceINR}</div>
+
+                  <Link
+                    href={`/checkout/${product.id}`}
+                    className="get-code"
+                  >
+                    GET CODE →
+                  </Link>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section reels-section" id="reels">
+        <div className="section-heading">
+          <div>
+            <div className="section-kicker">Build With Harshit</div>
+
+            <h2>
+              WATCH.
+              <br />
+              BUILD.
+            </h2>
+          </div>
+
+          <p className="section-description">
+            See the projects in action on Instagram before getting the source
+            code.
+          </p>
+        </div>
+
+        <div className="reels-grid">
+          {reels.map((reel) => (
+            <article className="reel-card" key={reel.url}>
+              <div className="reel-frame">
+                <iframe
+                  src={`${reel.url}embed/`}
+                  title={reel.title}
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+
+              <div className="reel-info">
+                <h3>{reel.title}</h3>
+
+                <p>
+                  Watch the project reel and see the build before getting the
+                  source code.
+                </p>
+
+                <a
+                  href={reel.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="reel-link"
+                >
+                  WATCH ON INSTAGRAM ↗
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="about">
+        <div className="section-heading">
+          <div>
+            <div className="section-kicker">Build With Harshit</div>
+
+            <h2>
+              BUILD
+              <br />
+              SOMETHING
+              <br />
+              REAL.
+            </h2>
+          </div>
+
+          <p className="section-description">
+            A digital project library for builders, learners, developers and
+            electronics enthusiasts.
+          </p>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <div>
+          <strong>BUILD WITH HARSHIT</strong>
+          <br />
+          Practical projects. Real builds.
+        </div>
+
+        <div>
+          Educational & authorized use only.
+        </div>
+      </footer>
+    </main>
   );
 }
