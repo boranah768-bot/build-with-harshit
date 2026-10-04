@@ -4457,3 +4457,14 @@ body {
     padding-right: 16px !important;
   }
 }
+/* DESKTOP */
+.payment-confirm-card {
+  width: 900px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .payment-confirm-card {
+    width: 100%;
+  }
+}
