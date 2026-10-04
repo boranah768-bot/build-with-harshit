@@ -4599,3 +4599,304 @@ canvas {
     min-width: 0 !important;
   }
 }
+/* =====================================================
+   PAYMENT PAGE — MOBILE RESPONSIVE FIX
+   ===================================================== */
+
+@media screen and (max-width: 768px) {
+
+  /* Stop the page from creating a desktop-width canvas */
+  .payment-confirm-page {
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    position: relative !important;
+  }
+
+  /* Header */
+  .payment-confirm-header {
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 18px 16px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+  }
+
+  .payment-confirm-brand {
+    max-width: 50% !important;
+    min-width: 0 !important;
+  }
+
+  .payment-confirm-brand img,
+  .site-logo {
+    width: 120px !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .payment-confirm-back {
+    max-width: 50% !important;
+    font-size: 11px !important;
+    white-space: nowrap !important;
+  }
+
+  /* Main wrapper */
+  .payment-confirm-wrapper {
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 30px 16px 50px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Heading */
+  .payment-confirm-heading {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .payment-confirm-heading h1 {
+    max-width: 100% !important;
+    font-size: 38px !important;
+    line-height: 1.05 !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .payment-confirm-heading p {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Main card */
+  .payment-confirm-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 25px 0 0 !important;
+    padding: 20px 16px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* Order + total */
+  .confirm-card-top {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 18px !important;
+  }
+
+  .confirm-order,
+  .confirm-total {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .confirm-order h2 {
+    max-width: 100% !important;
+    font-size: 21px !important;
+    line-height: 1.3 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .confirm-total {
+    text-align: left !important;
+  }
+
+  /* Payment status */
+  .payment-status {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin-top: 20px !important;
+  }
+
+  /* Steps */
+  .payment-steps {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .payment-step {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .payment-step-content {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .payment-step-content h3,
+  .payment-step-content p {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Payment proof box */
+  .payment-proof-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 18px !important;
+  }
+
+  .payment-proof-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .payment-proof-content h3,
+  .payment-proof-content p {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* I HAVE PAID button */
+  .payment-proof-button {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  /* Security */
+  .payment-security {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .payment-security p {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Manual review */
+  .manual-review {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .manual-review p {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Help */
+  .payment-help {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin-top: 25px !important;
+  }
+
+  .payment-help p {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Footer */
+  .payment-confirm-footer {
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 20px 16px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  /* Decorative elements must NEVER create page width */
+  .payment-confirm-grid,
+  .payment-confirm-glow {
+    max-width: 100vw !important;
+    pointer-events: none !important;
+  }
+
+  /* Prevent long text / elements from pushing the page sideways */
+  .payment-confirm-page *,
+  .payment-confirm-page *::before,
+  .payment-confirm-page *::after {
+    box-sizing: border-box !important;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+   ===================================================== */
+
+@media screen and (max-width: 480px) {
+
+  .payment-confirm-header {
+    padding: 15px 14px !important;
+  }
+
+  .payment-confirm-wrapper {
+    padding: 25px 14px 40px !important;
+  }
+
+  .payment-confirm-heading h1 {
+    font-size: 32px !important;
+  }
+
+  .payment-confirm-card {
+    padding: 18px 14px !important;
+  }
+
+  .payment-confirm-brand img,
+  .site-logo {
+    width: 105px !important;
+  }
+
+  .payment-confirm-back {
+    font-size: 10px !important;
+  }
+
+  .payment-proof-button {
+    min-height: 50px !important;
+  }
+
+}
