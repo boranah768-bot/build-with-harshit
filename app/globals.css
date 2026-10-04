@@ -679,7 +679,7 @@ input {
 
 .auth-card h1 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 42px;
+  font-size: clamp(21px, calc(13.6056px + 1.9718vw), 42px);
   letter-spacing: -2px;
   margin-bottom: 12px;
 }
@@ -705,6 +705,9 @@ input {
 
 .auth-input {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  
   margin-top: 7px;
   border: 1px solid #242424;
   background: #090909;
@@ -712,6 +715,7 @@ input {
   padding: 14px 15px;
   border-radius: 12px;
   outline: none;
+
 }
 
 .auth-input:focus {
@@ -833,7 +837,7 @@ input {
 
 .dashboard-box h2 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 40px;
+  font-size: clamp(20px, calc(12.9577px + 1.8779vw), 40px);
 }
 
 .dashboard-box p {
@@ -901,7 +905,7 @@ input {
 
 .checkout-card h1 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 45px;
+  font-size: clamp(22.5px, calc(14.5775px + 2.1127vw), 45px);
   letter-spacing: -2px;
 }
 
@@ -1717,7 +1721,7 @@ input {
   margin-top: 18px;
 
   font-family: "Space Grotesk", sans-serif;
-  font-size: 60px;
+  font-size: clamp(30px, calc(19.4366px + 2.8169vw), 60px);
   letter-spacing: -3px;
 }
 
@@ -1877,7 +1881,7 @@ input {
   }
 
   .checkout-not-found h1 {
-    font-size: 42px;
+    font-size: clamp(21px, calc(13.6056px + 1.9718vw), 42px);
   }
 }
 /* =========================================================
@@ -2495,7 +2499,7 @@ input {
   }
 
   .bwh-hero-left h1 {
-    font-size: 60px;
+    font-size: clamp(30px, calc(19.4366px + 2.8169vw), 60px);
     letter-spacing: -4px;
   }
 
@@ -4264,7 +4268,7 @@ input {
   }
 
   .payment-confirm-heading h1 {
-    font-size: 48px;
+    font-size: clamp(24px, calc(15.5493px + 2.2535vw), 48px);
     letter-spacing: -3px;
   }
 
@@ -4899,4 +4903,25 @@ canvas {
     min-height: 50px !important;
   }
 
+}
+
+/* Navigation responsiveness */
+@media (max-width: 768px) {
+  .main-nav,
+  .nav,
+  .navbar,
+  .menu {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+  
+  .main-nav a,
+  .nav a,
+  .navbar a,
+  .menu a {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 12px !important;
+  }
 }
