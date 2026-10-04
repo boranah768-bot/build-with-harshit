@@ -4299,252 +4299,104 @@ input {
     flex-direction: column;
   }
 }
-/* ================================
-   MOBILE RESPONSIVE FIX
-   ================================ */
-
-@media (max-width: 768px) {
-
-  /* HEADER */
-  .payment-confirm-header {
-    width: 100%;
-    padding: 16px 18px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-  }
-
-  .site-logo {
-    width: 130px;
-    max-width: 45vw;
-    height: auto;
-    display: block;
-    object-fit: contain;
-  }
-
-  .payment-confirm-back {
-    font-size: 12px;
-    white-space: nowrap;
-  }
-
-  /* MAIN CONTENT */
-  .payment-confirm-wrapper {
-    width: 100%;
-    max-width: 100%;
-    padding: 35px 18px;
-    margin: 0 auto;
-  }
-
-  /* HEADING */
-  .payment-confirm-heading {
-    width: 100%;
-  }
-
-  .payment-confirm-heading h1 {
-    font-size: 42px;
-    line-height: 1.05;
-    word-break: normal;
-  }
-
-  .payment-confirm-heading p {
-    font-size: 14px;
-    line-height: 1.6;
-    max-width: 100%;
-  }
-
-  /* PAYMENT CARD */
-  .payment-confirm-card {
-    width: 100%;
-    max-width: 100%;
-    padding: 22px 18px;
-    box-sizing: border-box;
-  }
-
-  /* ORDER + PRICE */
-  .confirm-card-top {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-  }
-
-  .confirm-card-top h2 {
-    font-size: 21px;
-    line-height: 1.3;
-    word-break: break-word;
-  }
-
-  .confirm-total {
-    text-align: left;
-  }
-
-  .confirm-total strong {
-    font-size: 28px;
-  }
-
-  /* WARNING */
-  .confirm-warning {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 15px;
-    display: flex;
-    gap: 12px;
-  }
-
-  .confirm-warning p {
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
-  /* FORM */
-  .confirm-section {
-    width: 100%;
-  }
-
-  .confirm-section input {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  /* SCREENSHOT UPLOAD */
-  .screenshot-upload {
-    width: 100%;
-    min-height: 150px;
-    box-sizing: border-box;
-    padding: 20px;
-  }
-
-  .screenshot-upload strong {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  .screenshot-upload span {
-    font-size: 12px;
-    text-align: center;
-  }
-
-  /* SECURITY NOTE */
-  .proof-note {
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    gap: 10px;
-  }
-
-  .proof-note p {
-    font-size: 12px;
-    line-height: 1.5;
-  }
-
-  /* SUBMIT BUTTON */
-  .submit-proof-button {
-    width: 100%;
-    min-height: 54px;
-    box-sizing: border-box;
-    font-size: 12px;
-  }
-
-  /* MANUAL REVIEW */
-  .manual-review {
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    gap: 12px;
-  }
-
-  .manual-review p {
-    font-size: 12px;
-    line-height: 1.5;
-  }
-
-  /* FOOTER */
-  .payment-confirm-footer {
-    width: 100%;
-    padding: 20px 18px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-}
-
-
-/* ================================
-   SMALL PHONES
-   ================================ */
-
-@media (max-width: 480px) {
-
-  .payment-confirm-header {
-    padding: 14px 15px;
-  }
-
-  .site-logo {
-    width: 115px;
-    max-width: 42vw;
-  }
-
-  .payment-confirm-back {
-    font-size: 11px;
-  }
-
-  .payment-confirm-wrapper {
-    padding: 28px 14px;
-  }
-
-  .payment-confirm-heading h1 {
-    font-size: 34px;
-    line-height: 1.05;
-  }
-
-  .payment-confirm-heading p {
-    font-size: 13px;
-  }
-
-  .payment-confirm-card {
-    padding: 18px 14px;
-  }
-
-  .confirm-card-top h2 {
-    font-size: 19px;
-  }
-
-  .confirm-total strong {
-    font-size: 25px;
-  }
-
-  .confirm-warning {
-    padding: 13px;
-  }
-
-  .screenshot-upload {
-    min-height: 140px;
-  }
-
-  .submit-proof-button {
-    min-height: 52px;
-    padding: 14px 10px;
-  }
-
-  .payment-confirm-footer {
-    padding: 18px 15px;
-  }
-
-}
-
-
-/* ================================
-   PREVENT HORIZONTAL SCROLL
-   ================================ */
-
+/* Prevent horizontal overflow */
 html,
 body {
+  width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+}
+
+/* Make all elements respect screen width */
+* {
+  box-sizing: border-box;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+
+  /* Header */
+  header,
+  nav {
+    width: 100%;
+  }
+
+  nav {
+    padding: 16px 20px;
+  }
+
+  /* Hero */
+  .hero {
+    width: 100%;
+    min-height: auto;
+    padding: 70px 24px 50px;
+  }
+
+  .hero h1 {
+    font-size: clamp(52px, 15vw, 90px);
+    line-height: 0.9;
+  }
+
+  .hero p {
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+  /* Stats */
+  .stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stat {
+    min-width: 0;
+    padding: 20px 8px;
+  }
+
+  .stat-number {
+    font-size: 38px;
+  }
+
+  /* Project section */
+  .project-library {
+    width: 100%;
+    padding: 60px 24px;
+  }
+
+  /* Project cards */
+   .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+  .project-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Filters */
+  .filters {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    max-width: 100%;
+    padding-bottom: 8px;
+  }
+
+  .filters button {
+    flex-shrink: 0;
+  }
 }
