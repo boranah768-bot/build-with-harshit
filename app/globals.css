@@ -4537,3 +4537,65 @@ canvas {
     margin-right: 0 !important;
   }
 }
+/* MOBILE EMERGENCY FIX */
+
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  body {
+    zoom: 1 !important;
+  }
+
+  #__next {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  main {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  .payment-confirm-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  .payment-confirm-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .payment-confirm-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .payment-confirm-header {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .payment-confirm-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+}
