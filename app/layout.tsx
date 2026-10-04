@@ -7,6 +7,11 @@ export const metadata: Metadata = {
     "Practical Arduino, ESP32 and cybersecurity laboratory projects with source code and tutorials.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
