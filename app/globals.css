@@ -4400,3 +4400,60 @@ svg {
     flex-shrink: 0;
   }
 }
+/* MOBILE WIDTH FIX */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .payment-confirm-page,
+  .payment-confirm-wrapper,
+  .payment-confirm-header,
+  .payment-confirm-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .payment-confirm-wrapper {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .payment-confirm-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .payment-confirm-heading,
+  .confirm-section,
+  .confirm-warning,
+  .proof-note,
+  .manual-review {
+    max-width: 100% !important;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    max-width: 100%;
+  }
+
+  .payment-confirm-header {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
